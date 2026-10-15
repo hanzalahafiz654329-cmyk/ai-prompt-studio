@@ -60,3 +60,4 @@ AdSense
 - اپنے رابطے کی درست معلومات Contact page میں درج کریں۔
 - Privacy Policy کو اپنی اصل data/analytics/ad setup کے مطابق اپ ڈیٹ کریں۔
 - ہر prompt میں اپنی اصل وضاحت، مثال اور مفید ہدایات شامل کریں۔
+Updated
