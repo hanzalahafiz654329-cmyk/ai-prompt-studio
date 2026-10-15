@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Discover practical AI image prompts, video prompts, and avatar prompts with ready-to-copy instructions and tutorials.">
+  <meta name="theme-color" content="#0b1020">
+  <title>AI Prompt Studio — Discover your next creation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="AI Prompt Studio home">
+      <span class="brand-mark">✦</span><span>AI Prompt <b>Studio</b></span>
+    </a>
+    <nav class="nav">
+      <a href="#prompts">Explore</a><a href="#categories">Categories</a><a href="#about">About</a>
+    </nav>
+    <a class="button button-small" href="#prompts">Explore prompts <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> YOUR CREATIVE AI TOOLKIT</div>
+      <h1>Great ideas start<br>with the <span>right prompt.</span></h1>
+      <p class="hero-copy">Explore practical prompts for AI images, cinematic videos, and consistent avatar creations. Copy, customize, and create.</p>
+      <div class="hero-search">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search prompts, styles, projects..." aria-label="Search prompts">
+        <kbd>Search</kbd>
+      </div>
+      <div class="hero-meta"><span>✦ Carefully organized</span><span>↗ Ready to copy</span><span>▣ Creator-focused</span></div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading">
+        <div><div class="eyebrow muted">BROWSE THE LIBRARY</div><h2>Find your next <span>creation</span></h2></div>
+        <p>Choose a category to narrow your search.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card active" data-category="All"><span class="category-icon">✧</span><span><b>All prompts</b><small>Explore everything</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Image Prompts"><span class="category-icon purple">▧</span><span><b>Image prompts</b><small>Visuals & thumbnails</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Video Prompts"><span class="category-icon blue">▶</span><span><b>Video prompts</b><small>Motion & storytelling</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Avatar Prompts"><span class="category-icon pink">◉</span><span><b>Avatar prompts</b><small>Character consistency</small></span><span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="section prompt-section" id="prompts">
+      <div class="section-heading prompt-heading">
+        <div><div class="eyebrow muted">THE PROMPT LIBRARY</div><h2>Explore prompts <span id="resultsCount" class="count-pill">0</span></h2></div>
+        <select id="sortSelect" aria-label="Sort prompts"><option value="newest">Newest first</option><option value="title">Title A–Z</option></select>
+      </div>
+      <div id="promptGrid" class="prompt-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state hidden"><div>⌕</div><h3>No prompts found</h3><p>Try another keyword or category.</p><button id="resetFilters" class="button button-outline">Reset filters</button></div>
+    </section>
+
+    <section class="cta" id="about"><div class="cta-symbol">✦</div><div><div class="eyebrow">MADE FOR CREATORS</div><h2>Your next idea is one prompt away.</h2><p>Use these examples as a starting point, then customize them for your own project.</p></div><a class="button" href="#prompts">Browse library ↗</a></section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>AI Prompt <b>Studio</b></span></a>
+    <div class="footer-links"><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></div>
+    <p>© <span id="year"></span> AI Prompt Studio. Create responsibly.</p>
+  </footer>
+
+  <div id="promptModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-topline"><span id="modalCategory" class="tag">Prompt</span><span id="modalDate" class="modal-date"></span></div>
+      <h2 id="modalTitle"></h2><p id="modalDescription" class="modal-description"></p>
+      <div id="imagePromptWrap" class="prompt-block hidden"><div class="block-head"><b>Image prompt</b><button class="copy-button" data-copy="image">Copy prompt</button></div><pre id="modalImagePrompt"></pre></div>
+      <div id="videoPromptWrap" class="prompt-block hidden"><div class="block-head"><b>Video prompt</b><button class="copy-button" data-copy="video">Copy prompt</button></div><pre id="modalVideoPrompt"></pre></div>
+      <a id="youtubeLink" class="button button-outline hidden" href="#" target="_blank" rel="noopener noreferrer">Watch tutorial ↗</a>
+      <p class="modal-note">Tip: adapt the prompt to your tool, reference image, and project needs.</p>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
