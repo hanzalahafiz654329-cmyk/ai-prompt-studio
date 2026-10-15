@@ -6,6 +6,6 @@ Never put a service_role key here. Only the public anon/publishable key belongs 
 window.APP_CONFIG = {
 siteName: "AI Prompt Studio",
 supabaseUrl: "https://bcdaoorsfvqoqfdagodm.supabase.co",
-supabaseAnonKey: "",
+supabaseAnonKey: "sb_publishable_9rkZX1t1UqwTIHHciXEqrA_O_G8aD5V",
 youtubeChannelUrl: ""
 };
